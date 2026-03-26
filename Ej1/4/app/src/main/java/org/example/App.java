@@ -4,7 +4,7 @@
 package org.example;
 
 public class App {
-    private static Cuenta cuenta = new Cuenta(1000);
+    private static final Cuenta cuenta = new Cuenta(1000);
     public static void main(String[] args) {
         for (int i = 0; i < 2; i++) {
             // 1. Sin sincronización - 2. Con sincronización
@@ -14,7 +14,7 @@ public class App {
     }
 
     static class Rommie implements Runnable {
-        private int tipo;
+        private final int tipo;
 
         public Rommie(int tipo) {
             this.tipo = tipo;
