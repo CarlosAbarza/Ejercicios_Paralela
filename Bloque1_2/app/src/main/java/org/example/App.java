@@ -26,12 +26,12 @@ public class App {
     }
 
     static class ManejarAuto implements Runnable {
-        private Auto auto;
-        private int id;
+        private final Auto auto;
+        private final int id;
 
         public ManejarAuto(int id) {
             this.auto = new Auto();
-            this.id = id;
+            this.id = id + 1;
         }
 
         @Override
@@ -39,7 +39,7 @@ public class App {
             while (!auto.llegoALaMeta()) {
                 auto.avanzar();
                 try {
-                    Thread.sleep(1000); // Simula el tiempo que tarda en avanzar
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -14,6 +14,6 @@ public class Auto {
     }
 
     public boolean llegoALaMeta() {
-        return tiempo == 0;
+        return tiempo <= 0;
     }
 }
