@@ -59,7 +59,7 @@ public class App {
             String newmensaje = "";
 
             for (int i = mensaje.length() - 1; i >= 0; i--) {
-                newmensaje += (char) (mensaje.charAt(i) + 1);
+                newmensaje += (char) (mensaje.charAt(i));
             }
             return newmensaje;
         }
